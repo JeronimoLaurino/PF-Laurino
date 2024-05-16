@@ -1,20 +1,10 @@
-@mixin reset-margin-padding {
+// Reset de estilos
+* {
     margin: 0;
     padding: 0;
 }
 
-@mixin media-xs {
-    @media (max-width: 480px) {
-        @content;
-    }
-}
-
-@mixin media-sm {
-    @media (max-width: 768px) {
-        @content;
-    }
-}
-
+// Estilos de la barra de navegación
 .navColor {
     background-color: rgb(255, 255, 255);
 }
@@ -23,6 +13,7 @@
     height: 75px;
 }
 
+// Estilos generales
 .d-block {
     height: 650px;
     width: auto;
@@ -32,6 +23,7 @@
     text-align: center;
 }
 
+// Estilos de la sección de productos
 .primProd {
     display: flex;
     justify-content: center;
@@ -57,95 +49,102 @@
     width: 100%;
     text-align: center;
     margin-bottom: 40px;
+}
 
-    h2 {
-        font-size: 24px;
-        font-weight: bold;
-    }
+.subcategoria h2 {
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .producto {
-    width: calc(33.33% - 20px);
+    width: calc(35% - 20px);
     margin-bottom: 20px;
     background-color: #f0f0f0;
     border-radius: 8px;
     padding: 20px;
     box-sizing: border-box;
+}
 
-    img {
-        width: 100%;
-        border-radius: 8px;
-    }
+.producto img {
+    width: 100%;
+    border-radius: 8px;
+}
 
-    h3 {
-        margin-top: 0;
-    }
+.producto h3 {
+    margin-top: 0;
+}
 
-    @include media-sm {
+// Estilos responsivos para los productos
+@media (max-width: 770px) {
+    .producto {
         width: calc(50% - 20px);
     }
+}
 
-    @include media-xs {
+@media (max-width: 480px) {
+    .producto {
         width: 100%;
     }
 }
 
+// Estilos del formulario de contacto
 .contMail {
     max-width: 800px;
     margin: auto;
     padding: 3rem;
     text-align: center;
-}
 
-form {
-    display: inline-block;
-    text-align: left;
+    form {
+        display: inline-block;
+        text-align: left;
 
-    label {
-        display: block;
-        margin-bottom: 10px;
-    }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
 
-    input[type="text"],
-    textarea {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 20px;
-        border-radius: 8px;
-        border: 1px solid #ccc;
-        box-sizing: border-box;
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
 
         textarea {
             resize: vertical;
         }
     }
-}
 
-.boton {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    cursor: pointer;
+    .boton {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        cursor: pointer;
 
-    &:hover {
-        background-color: #0056b3;
+        &:hover {
+            background-color: #0056b3;
+        }
+    }
+
+    .redes-sociales {
+        margin-top: 40px;
+
+        img {
+            width: 50px;
+            margin: 0 10px;
+        }
     }
 }
 
-.redes-sociales {
-    margin-top: 40px;
-
-    img {
-        width: 50px;
-        margin: 0 10px;
-    }
-}
-
+// Estilos de la sección "Quiénes Somos"
 .quienesSomos {
     max-width: 800px;
-    margin: 0 0 0 150px;
+    margin: 0px 0px 0px 150px;
     padding: 0 10px;
 }
 
@@ -153,6 +152,7 @@ form {
     margin-bottom: 40px;
 }
 
+// Estilos de los atajos de inicio
 .atajosIni {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -182,17 +182,20 @@ form {
             color: #fff;
         }
     }
+}
 
-    @include media-xs {
+// Estilos responsivos para los atajos de inicio
+@media screen and (max-width: 770px) {
+    .atajosIni {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
+    }
 
-        .atajos {
-            margin-bottom: 20px;
+    .atajos {
+        margin-bottom: 20px;
 
-            img {
-                max-width: 100%;
-            }
+        img {
+            max-width: 100%;
         }
     }
 }

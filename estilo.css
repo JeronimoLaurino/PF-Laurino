@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .navColor {
   background-color: rgb(255, 255, 255);
 }
@@ -41,27 +46,31 @@
   text-align: center;
   margin-bottom: 40px;
 }
+
 .subcategoria h2 {
   font-size: 24px;
   font-weight: bold;
 }
 
 .producto {
-  width: calc(33.33% - 20px);
+  width: calc(35% - 20px);
   margin-bottom: 20px;
   background-color: #f0f0f0;
   border-radius: 8px;
   padding: 20px;
   box-sizing: border-box;
 }
+
 .producto img {
   width: 100%;
   border-radius: 8px;
 }
+
 .producto h3 {
   margin-top: 0;
 }
-@media (max-width: 768px) {
+
+@media (max-width: 770px) {
   .producto {
     width: calc(50% - 20px);
   }
@@ -71,24 +80,22 @@
     width: 100%;
   }
 }
-
 .contMail {
   max-width: 800px;
   margin: auto;
   padding: 3rem;
   text-align: center;
 }
-
-form {
+.contMail form {
   display: inline-block;
   text-align: left;
 }
-form label {
+.contMail form label {
   display: block;
   margin-bottom: 10px;
 }
-form input[type=text],
-form textarea {
+.contMail form input[type=text],
+.contMail form textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
@@ -96,12 +103,10 @@ form textarea {
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
-form input[type=text] textarea,
-form textarea textarea {
+.contMail form textarea {
   resize: vertical;
 }
-
-.boton {
+.contMail .boton {
   background-color: #007bff;
   color: white;
   border: none;
@@ -109,21 +114,20 @@ form textarea textarea {
   border-radius: 8px;
   cursor: pointer;
 }
-.boton:hover {
+.contMail .boton:hover {
   background-color: #0056b3;
 }
-
-.redes-sociales {
+.contMail .redes-sociales {
   margin-top: 40px;
 }
-.redes-sociales img {
+.contMail .redes-sociales img {
   width: 50px;
   margin: 0 10px;
 }
 
 .quienesSomos {
   max-width: 800px;
-  margin: 0 0 0 150px;
+  margin: 0px 0px 0px 150px;
   padding: 0 10px;
 }
 
@@ -158,15 +162,16 @@ form textarea textarea {
   background-color: rgba(0, 0, 0, 0.7);
   color: #fff;
 }
-@media (max-width: 480px) {
+
+@media screen and (max-width: 770px) {
   .atajosIni {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
-  .atajosIni .atajos {
+  .atajos {
     margin-bottom: 20px;
   }
-  .atajosIni .atajos img {
+  .atajos img {
     max-width: 100%;
   }
 }
