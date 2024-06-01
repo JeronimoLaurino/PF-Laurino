@@ -126,13 +126,27 @@
 }
 
 .quienesSomos {
-  max-width: 800px;
-  margin: 0px 0px 0px 150px;
-  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.textos {
+  width: 50%;
 }
 
 .secQs {
-  margin-bottom: 40px;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.secQs h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.secQs p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 .atajosIni {
